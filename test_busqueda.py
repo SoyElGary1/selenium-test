@@ -23,7 +23,7 @@ try:
 
     wait = WebDriverWait(driver, 10)
     resultados = wait.until(
-        EC.presence_of_all_elements_located((By.CSS_SELECTOR, "a.result__a"))
+        EC.presence_of_all_elements_located((By.CSS_SELECTOR, '[data-nrn="result"]'))
     )
 
     assert len(resultados) > 0, "No se encontraron resultados."
